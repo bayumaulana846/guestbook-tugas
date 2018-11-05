@@ -1,6 +1,7 @@
 <html>
 <head>
   <title> Guest book </title>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body bgcolor="black" text="white">
   <div id="admin" >

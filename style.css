@@ -1,3 +1,5 @@
-p {
-  font-size: 50px;
+ body {
+  background: black;
+  text: white;
+  font-size: 14px;
 }
