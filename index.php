@@ -79,9 +79,9 @@
 
 			<li class="dropdown"><a href="#">Menu</a>
 				<ul class="isi-dropdown">
-					<li><a href="#"> About </a></li>
+					<li><a href="LICENSE"> About </a></li>
 					<li><a href="#"> Daftar tamu </a></li>
-					<li><a href="#"> Pendaftaran tamu </a></li>
+					<li><a href="resepsionis.php"> Pendaftaran tamu </a></li>
 				</ul>
         <li><a href="#">Setting</a></li>
         <li class="dropdown"><a href="#">Help</a>
@@ -94,8 +94,8 @@
 
 <br/>
 
-<center>
-	<h1>TEST<br/> </h1>
+<center><marquee>
+	<h1>TEST<br/> </h1></marquee>
 </center>
 
 </body>
