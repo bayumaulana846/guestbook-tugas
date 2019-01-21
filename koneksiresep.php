@@ -5,7 +5,7 @@
    $database  = "bukutamu";
    $conn = mysqli_connect ($hostmysql,$username,$password,$database);
    if ($conn) {
-     echo "<b> Terkirim</b>";
+     echo "<b> Terkirim</b><br>";
    }
    else{
      die ("<b> koneksi Gagal</br>");

@@ -2,7 +2,7 @@
    session_start();
    session_destroy();
 ?>
-<body bgcolor="grey" text="black">
+<body bgcolor="black" text="white">
 <div align="center">
   <br>
   <br>

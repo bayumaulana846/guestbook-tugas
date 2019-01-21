@@ -15,27 +15,49 @@
 <?php
 include ("koneksiresep.php");
 $sql = "SELECT Nama, No_HP, Email, Tujuan, Waktu, Keperluan FROM tamu2";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-  while($rows = $result->fetch_assoc()) {
-    echo "
-    <tabel>
-      <tr>
-          <td> Nama : $rows[Nama] </td><br>
-          <td> No_HP : $rows[No_HP] </td><br>
-          <td> Email : $rows[Email] </td><br>
-          <td> Tujuan : $rows[Tujuan] </td><br>
-          <td> Waktu : $rows[Waktu] </td><br>
-          <td> Keperluan : $rows[Keperluan] </td><br>
-      </tr>
-      </table>";
-  }
-} else {
-  echo "0  results";
-}
-$conn->close()
- ?>
+$query = mysqli_query($conn, $sql);
 
+if (!$query) {
+	die ('SQL Error: ' . mysqli_error($conn));
+}
+
+echo '
+    <table width = 500 border =3>
+		<thead>
+		<tr>
+				<th>Nama</th>
+        <th>No_HP</th>
+				<th>Email</th>
+        <th>Tujuan</th>
+				<th>Waktu</th>
+				<th>Keperluan</th>
+		</tr>
+		</thead>
+		<tbody>';
+while ($row = mysqli_fetch_array($query))
+{
+	echo '<tr>
+			<td>'.$row['Nama'].'</td>
+      <td>'.$row['No_HP'].'</td>
+      <td>'.$row['Email'].'</td>
+      <td>'.$row['Tujuan'].'</td>
+      <td>'.$row['Waktu'].'</td>
+      <td>'.$row['Keperluan'].'</td>
+
+		</tr>';
+
+}
+echo '
+	</tbody>
+</table>';
+
+
+mysqli_free_result($query);
+
+
+mysqli_close($conn);
+
+?>
 </body>
 </html>
 <hr size=2>

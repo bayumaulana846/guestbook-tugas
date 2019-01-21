@@ -1,5 +1,5 @@
 <html>
-<body bgcolor="grey" text="black">
+<body bgcolor="black" text="white">
 
 	<style type="text/css">
 	html,body{
@@ -22,7 +22,6 @@
 	.menu-home > ul > li {
 		float: left;
 	}
-
 
 	.menu-home li a {
 		display: inline-block;
@@ -71,20 +70,20 @@
 	<div class="menu-home">
 
 		<ul>
-			<li class="dropdown"><a href="#">Home</a>
+			<li class="dropdown"><a href="index.php">Home</a>
         <ul class="isi-dropdown">
 
 				</ul>
 			<li class="dropdown"><a href="#">Menu</a>
 				<ul class="isi-dropdown">
-					<li><a href="LICENSE"> About </a></li>
-					<li><a href="#"> Daftar tamu </a></li>
-					<li><a href="resepsionis.php"> Isi buku tamu </a></li>
+					<li><a href="perkenalan.php"> About </a></li>
+					<li><a href="tampilresep.php"> Daftar tamu </a></li>
+					<li><a href="resep.php"> Isi buku tamu </a></li>
 				</ul>
-        <li><a href="LICENSE">Setting</a></li>
+        <li><a href="perkenalan.php">Setting</a></li>
         <li class="dropdown"><a href="#">Help</a>
           <ul class="isi-dropdown">
-            <li><a href="#"> Kontak</a></li>
+            <li><a href="kontak.php"> Kontak</a></li>
 		</ul>
 
 	</div>
@@ -103,5 +102,8 @@ if(!isset($_SESSION['username'])) {
 
 <title>Halaman Sukses Login</title>
 <div align='center'>
-  <h1> Selamat Datang, <b><?php echo $username;?></b> <a href="logout.php"><b>Logout</b></a><h1>
-</div>
+  <h3> Selamat Datang, <b><?php echo $username;?></b> <a href="logout.php"><b>Logout</b></a><h3>
+<?php echo 'Silahkan Isi Buku Tamu di Menu'; ?>
+	<br>
+	<br>
+	<br>

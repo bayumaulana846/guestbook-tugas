@@ -3,7 +3,7 @@
 
 	<title>Buku tamu</title>
 </head>
-<body bgcolor="grey" text="black">
+<body bgcolor="black" text="white">
 
 	<style type="text/css">
 	html,body{

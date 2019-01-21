@@ -14,7 +14,7 @@
 <?php
 include ("koneksiresep.php");
 $Nama=$_POST['Nama'];
-$No_HP=$_POST['No_HP'];
+$No_HP=$_POST['No_HP'];    
 $Email=$_POST['Email'];
 $Tujuan=$_POST['Tujuan'];
 $Waktu=$_POST['Waktu'];

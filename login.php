@@ -1,7 +1,7 @@
 <br/>
 
 <title>Login</title>
-<body bgcolor="grey" text="black">
+<body bgcolor="black" text="white">
 <div align='center'>
   <form action="proseslogin.php" method="post">
   <br>

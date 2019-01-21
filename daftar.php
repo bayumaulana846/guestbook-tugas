@@ -5,9 +5,10 @@
 ?>
 
 <title>Form Pendaftaran</title>
-<body bgcolor="grey" text="black">
+<body bgcolor="black" text="white">
 <div align='center'>
   <form action="prosesdaftar.php" method="post">
+
   <table>
   <tbody>
     <br>
@@ -16,7 +17,8 @@
     <br>
     <br>
     <br>
-  <tr><td colspan="2" align="center"><h1>Daftar Baru</h1><p>==========================<p></td></tr>
+
+  <tr><td colspan="2" align="center"><h1>Daftar Akun</h1><p>==========================<p></td></tr>
 
   <tr><td>Username</td><td> : <input name="username" type="text"></td></tr>
   <tr><td>Password</td><td> : <input name="password" type="password"></td></tr>
