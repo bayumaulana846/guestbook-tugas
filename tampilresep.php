@@ -3,7 +3,7 @@
   <title>Buku Tamu</title>
 </head>
 <body>
-<body bgcolor="black" text="white">
+<body background="Pictures/daun.jpg" text="white">
   <div align="center">
 <h2>Buku Tamu</h2>
 <a href="resep.php"> Kembali ke Buku Tamu</a>

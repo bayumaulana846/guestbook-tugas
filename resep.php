@@ -3,6 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Buku Tamu</title>
 </head>
+<div header="Pictures">
 <script language="javascript">
     function hanyaAngka(e, decimal) {
     var key;
@@ -33,17 +34,11 @@
     }
 
 </script>
-<body bgcolor="black" text="white">
+<body background="Pictures/daun.jpg" >
 <form action="simpanresep.php" method="post">
 <div align='center'>
-  <br>
-  <br>
-  <br>
   <h2>Silahkan Isi Buku Tamu</h2>
   <p>===========================</p>
-  <br>
-  <br>
-
   <hr size=3 >
 <table border="1">
 <tr>
@@ -75,9 +70,65 @@
 <td><input type="submit" name="simpan" value="Simpan"> <input type="reset" name ="Hapus" value="Hapus"></td>
 </tr>
 </table>
-<a href="index.php">HOME</a>
 </div>
 </form>
 </body>
 </html>
-<hr size=3 >
+
+<script type="text/javascript">
+window.setTimeout("waktu()",1000);
+function waktu() {
+var tanggal = new Date();
+setTimeout("waktu()",1000);
+document.getElementById("tanggalku").innerHTML
+= tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds();
+}
+</script>
+</head>
+<body bgcolor="white" text="white" onload="waktu()">
+<table align=center style="border:1px solid white" bgcolor="#191970"><tr><td>
+<div id="tanggalku">
+</div></td></tr>
+</table>
+</body>
+</html>
+
+<?php
+$month= date ("m");
+$year=date("Y");
+$day=date("d");
+$endDate=date("t",mktime(0,0,0,$month,$day,$year));
+echo '<font face="freemono" size="5">';
+echo '<table align="center" border="3" cellpadding=5 cellspacing=5 style=""><tr><td align=center>';
+echo "Hari ini tanggal : ".date("d F Y ",mktime(0,0,0,$month,$day,$year));
+echo '</td></tr></table>';
+echo '<table align="center" border="1" cellpadding=2 cellspacing=1 style="border:2px solid #ccc">
+   <tr bgcolor="#000000">
+   <td align=center><font color=red>Minggu</font></td>
+   <td align=center>Senin</td>
+   <td align=center>Selasa</td>
+   <td align=center>Rabu</td>
+   <td align=center>Kamis</td>
+   <td align=center>Jumat</td>
+   <td align=center>Sabtu</td>
+   </tr>';
+$s=date ("w", mktime (0,0,0,$month,1,$year));
+for ($ds=1;$ds<=$s;$ds++) {
+echo "<td style=\"font-family:arial;color:#B3D9FF\" align=center valign=middle bgcolor=\"\">
+</td>";}
+for ($d=1;$d<=$endDate;$d++)
+{
+   if (date("w",mktime (0,0,0,$month,$d,$year)) == 0) { echo "<tr>"; }
+   $fontColor="#FFFFFF";
+   if (date("D",mktime (0,0,0,$month,$d,$year)) == "Sun")
+   { $fontColor="red"; }
+   echo "<td style=\"font-family:arial;color:#333333\" align=center valign=middle> <span style=\"color:$fontColor\">$d</span></td>";
+   if (date("w",mktime (0,0,0,$month,$d,$year)) == 6)
+   {
+     echo "</tr>";
+}
+}
+echo '</table>';
+?>
+<a href="index.php">HOME</a>
+<hr size=3>

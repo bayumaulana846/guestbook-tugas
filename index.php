@@ -1,5 +1,5 @@
 <html>
-<body bgcolor="black" text="white">
+<body background="Pictures/daun.jpg" text="white">
 
 	<style type="text/css">
 	html,body{
