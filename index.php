@@ -1,9 +1,5 @@
 <html>
-<head>
-
-	<title>Buku tamu</title>
-</head>
-<body bgcolor="black" text="white">
+<body background="Pictures/daun.jpg" text="white">
 
 	<style type="text/css">
 	html,body{
@@ -12,23 +8,22 @@
 		font-family: sans-serif;
 	}
 
-	.menu-malasngoding{
+	.menu-home {
 		background-color: #3141ff;
 	}
 
-	.menu-malasngoding ul {
+	.menu-home ul {
 		list-style-type: none;
 		margin: 0;
 		padding: 0;
 		overflow: hidden;
 	}
 
-	.menu-malasngoding > ul > li {
+	.menu-home > ul > li {
 		float: left;
 	}
 
-
-	.menu-malasngoding li a {
+	.menu-home li a {
 		display: inline-block;
 		color: white;
 		text-align: center;
@@ -36,7 +31,7 @@
 		text-decoration: none;
 	}
 
-	.menu-malasngoding li a:hover{
+	.menu-home li a:hover{
 		background-color: #2525ff;
 	}
 
@@ -72,31 +67,43 @@
 
 
 <header class="header">
-	<div class="menu-malasngoding">
+	<div class="menu-home">
 
 		<ul>
-			<li><a href="#">Home</a></li>
+			<li class="dropdown"><a href="index.php">Home</a>
+        <ul class="isi-dropdown">
 
+				</ul>
 			<li class="dropdown"><a href="#">Menu</a>
 				<ul class="isi-dropdown">
-					<li><a href="LICENSE"> About </a></li>
-					<li><a href="#"> Daftar tamu </a></li>
-					<li><a href="resepsionis.php"> Pendaftaran tamu </a></li>
+					<li><a href="perkenalan.php"> About </a></li>
+					<li><a href="tampilresep.php"> Daftar tamu </a></li>
+					<li><a href="resep.php"> Isi buku tamu </a></li>
 				</ul>
-        <li><a href="#">Setting</a></li>
+        <li><a href="perkenalan.php">Setting</a></li>
         <li class="dropdown"><a href="#">Help</a>
           <ul class="isi-dropdown">
-            <li><a href="#"> Kontak</a></li>
+            <li><a href="kontak.php"> Kontak</a></li>
 		</ul>
 
 	</div>
 </header>
-
-<br/>
-
-<center><marquee>
-	<h1>TEST<br/> </h1></marquee>
-</center>
-
 </body>
 </html>
+
+<?php
+session_start();
+if(!isset($_SESSION['username'])) {
+   header('location:login.php');
+} else {
+   $username = $_SESSION['username'];
+}
+?>
+
+<title>Halaman Sukses Login</title>
+<div align='center'>
+  <h3> Selamat Datang, <b><?php echo $username;?></b> <a href="logout.php"><b>Logout</b></a><h3>
+<?php echo 'Silahkan Isi Buku Tamu di Menu'; ?>
+	<br>
+	<br>
+	<br>
