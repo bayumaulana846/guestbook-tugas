@@ -2,7 +2,7 @@
    session_start();
    session_destroy();
 ?>
-<body bgcolor="black" text="white">
+<body background="ptba.jpg" text="white">
 <div align="center">
   <br>
   <br>

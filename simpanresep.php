@@ -9,11 +9,10 @@
   var tanggal = new Date();
   setTimeout("waktu()",1000);
   document.getElementById("tanggalku").innerHTML
-  = tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds();
-  }
+  = tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds();}
   </script>
   </head>
-  <body bgcolor="white" text="white" onload="waktu()">
+  <body bgcolor="black" text="white" onload="waktu()">
   <br>
   <table align=center style="border:1px solid white" bgcolor="#191970"><tr><td>
   <div id="tanggalku">
@@ -27,7 +26,11 @@
   <h1>Buku Tamu</h1>
   <a href="resep.php"> Kembali Ke Buku Tamu</a>
   <br>
+
   <h2>Buku Tamu</h2>
+  <br>
+  <br>
+  <br>
   <a href="tampilresep.php">Liat Buku Tamu</a>
   <hr size=1>
 
@@ -41,12 +44,10 @@ $Waktu=$_POST['Waktu'];
 $Keperluan=$_POST['Keperluan'];
 $sql = "INSERT INTO tamu2 (Nama, No_HP, Email, Tujuan, Waktu, Keperluan)
 VALUES ('$Nama', '$No_HP', '$Email', '$Tujuan', '$Waktu', '$Keperluan')";
-if ($conn->query($sql) === TRUE) {
-  echo "Pesan Telah Terkirim!";
-} else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
-}
+if ($conn->query($sql) === TRUE)
+{echo "Pesan Telah Terkirim!";}else
+{echo "Error: " . $sql . "<br>" . $conn->error;}
 $conn->close();
- ?>
- </body>
+?>
+</body>
 </html>

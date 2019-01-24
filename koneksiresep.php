@@ -4,10 +4,6 @@
    $password  = "123456";
    $database  = "bukutamu";
    $conn = mysqli_connect ($hostmysql,$username,$password,$database);
-   if ($conn) {
-     echo "<b> Terkirim</b><br>";
-   }
-   else{
-     die ("<b> koneksi Gagal</br>");
-   }
+   if ($conn) {echo "<b> Terkirim</b><br>";}
+   else{die ("<b> koneksi Gagal</br>");}
 ?>
