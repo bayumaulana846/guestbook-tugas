@@ -37,7 +37,7 @@
     <body background="silhouette_stars_shine_129858_1280x720.jpg" text="white">
     <form action="simpanresep.php" method="post">
     <div align='center'>
-    <h2>Silahkan Isi Buku Tamu</h2>
+    <h2>Isi Buku Tamu</h2>
     <p> ==========================</p>
     <table border="1">
     <tr>
